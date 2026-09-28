@@ -1,26 +1,45 @@
-# Jupyter temporary files
-.ipynb_checkpoints/
+# ============================================================
+# BIOT670I Microbiome Group Project
+# Git ignore rules
+# ============================================================
 
-# Temporary files
+# Jupyter / Colab temporary files
+.ipynb_checkpoints/
 *.tmp
 
 # Python cache files
 __pycache__/
 *.pyc
 
-# Operating system files
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# Operating-system files
 .DS_Store
 Thumbs.db
 
-# Large/generated simulated data
+# ------------------------------------------------------------
+# Data
+# ------------------------------------------------------------
+
+# Generated simulated datasets
 data/simulated/*.csv
 data/simulated/*.tsv
 data/simulated/*.rds
 data/simulated/*.pkl
 
-# Real data should not be committed by default
+# Real microbiome data should not be committed by default
 data/real/*
+
+# Allow documentation describing the real-data directory
 !data/real/README.md
 
-# Keep selected final results in results/
-# Additional generated/intermediate results can be added here later.
+# ------------------------------------------------------------
+# Results
+# ------------------------------------------------------------
+
+# Final project results are intentionally tracked in GitHub.
+# Intermediate or exploratory outputs should not be committed
+# unless they are needed for reproducibility or interpretation.
