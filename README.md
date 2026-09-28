@@ -6,9 +6,10 @@ This repository contains the code, analyses, documentation, and results for the 
 
 - Project planning: Complete
 - Simulation framework: Complete
-- Null calibration: Complete
-- Signal simulation: Next phase
-- Final analysis: Planned
+- Phase 1 – Null calibration: Complete
+- Phase 2 – Signal simulation: Complete
+- Phase 3 – Extended/real-data analysis: Next phase
+- Final integration and interpretation: Planned
 
 ## Repository Structure
 
