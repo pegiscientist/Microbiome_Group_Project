@@ -1,4 +1,4 @@
-"Simulation","Seed","Method","Taxa_Raw_Tested","Taxa_BH_Tested","Min_Raw_P","Taxon_Min_Raw_P","Min_BH_Q","Taxon_Min_BH_Q","Raw_P_Less_0_05","Expected_BH_Rejections","Reproduced_BH_Rejections","Reproduces_Cell7G"
+"Simulation","Seed","Method","Taxa_Raw_Tested","Taxa_BH_Tested","Min_Raw_P","Taxon_Min_Raw_P","Min_BH_Q","Taxon_Min_BH_Q","Raw_P_Less_0_05","Expected_BH_Rejections","Reproduced_BH_Rejections","Reproduces_Step7G"
 50,91,"CLR_Wilcoxon",100,100,9.62034753662078e-05,"Taxon_054",0.00962034753662078,"Taxon_054",2,1,1,TRUE
 92,133,"CLR_Wilcoxon",100,100,0.000444888840408941,"Taxon_039",0.0444888840408941,"Taxon_039",5,1,1,TRUE
 96,137,"CLR_Wilcoxon",100,100,0.000413493213493599,"Taxon_083",0.0206746606746799,"Taxon_083",2,2,2,TRUE
