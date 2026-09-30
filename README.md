@@ -1,14 +1,16 @@
 # BIOT670I Microbiome Group Project
 
-This repository contains the code, analyses, documentation, and results for the BIOT670I microbiome group project (Capstone Project).
+This repository contains the code, analyses, documentation, and results for the BIOT670I microbiome capstone project.
+
+The project evaluates differential-abundance analysis methods using simulated microbiome data, beginning with null calibration and progressing to planted-signal simulations before extended and real-data analysis.
 
 ## Project Status
 
 - Project planning: Complete
 - Simulation framework: Complete
-- Phase 1 – Null calibration: Complete
-- Phase 2 – Signal simulation: Complete
-- Phase 3 – Extended/real-data analysis: Next phase
+- Phase 1 - Null calibration: Complete
+- Phase 2 - Signal simulation and performance evaluation: Complete
+- Phase 3 - Extended/real-data analysis: Next phase
 - Final integration and interpretation: Planned
 
 ## Repository Structure
@@ -18,6 +20,7 @@ Microbiome_Group_Project/
 ├── data/
 ├── notebooks/
 │   ├── BIOT670I_Microbiome_Project.ipynb
+│   ├── biot670i_microbiome_project.py
 │   └── README.md
 ├── results/
 │   ├── README.md
@@ -33,24 +36,48 @@ Microbiome_Group_Project/
 └── README.md
 ```
 
-## Phase 1 Results
+The primary analysis is maintained in the Jupyter notebook, with a Python export included in the `notebooks/` directory for easier code review and version tracking.
 
-Phase 1 evaluates the statistical analysis pipeline under the null hypothesis using repeated microbiome simulations.
+## Phase 1: Null Calibration
 
-Selected Phase 1 results, including empirical Type I error, Benjamini-Hochberg false-discovery behavior, and the final calibration summary, are available in the [`results`](results/) directory.
+Phase 1 evaluates the statistical analysis pipeline under the null hypothesis, where no true differential-abundance signal is present.
 
+Repeated microbiome simulations were used to assess calibration behavior, including:
 
-## Phase 2 Results
+- empirical raw Type I error relative to the nominal 0.05 level
+- Benjamini-Hochberg false-discovery behavior
+- robustness and diagnostic summaries across repeated simulation runs
 
-Phase 2 evaluates differential-abundance method performance under simulated microbiome datasets containing known signal effects.
+Selected Phase 1 tables and figures are available in the [`results`](results/) directory.
 
-The analysis compares CLR/Wilcoxon, ALDEx2 Welch, ANCOM-BC2, and DESeq2 across increasing signal strengths (1.5×, 2×, and 4×). Performance is evaluated primarily using sensitivity and empirical false discovery rate (FDR).
+## Phase 2: Signal Simulation
 
-Selected Phase 2 outputs are available in the [`results`](results/) directory:
+Phase 2 evaluates method performance after known differential-abundance signals are introduced into the simulated microbiome datasets.
 
-- [`phase2_performance_summary_8F.csv`](results/phase2_performance_summary_8F.csv) – summary performance metrics across methods and signal strengths
-- [`phase2_sensitivity_plot_8G.png`](results/phase2_sensitivity_plot_8G.png) – sensitivity across signal strengths
-- [`phase2_empirical_FDR_plot_8H.png`](results/phase2_empirical_FDR_plot_8H.png) – empirical FDR across signal strengths
-- [`phase2_combined_performance_plot_8I.png`](results/phase2_combined_performance_plot_8I.png) – combined sensitivity and empirical FDR comparison
+Four methods were compared:
+
+- CLR/Wilcoxon
+- ALDEx2 Welch
+- ANCOM-BC2
+- DESeq2
+
+Signal strengths of 1.5x, 2x, and 4x were evaluated across repeated simulations. Performance was summarized primarily using sensitivity and empirical false discovery rate (FDR).
+
+Across the simulated conditions, sensitivity generally increased as signal strength increased. The methods also differed in their false-discovery behavior, illustrating a trade-off between detection sensitivity and FDR control rather than a single method performing best under every condition.
+
+Selected Phase 2 outputs include:
+
+- [`phase2_performance_summary_8F.csv`](results/phase2_performance_summary_8F.csv) - summary performance metrics across methods and signal strengths
+- [`phase2_sensitivity_plot_8G.png`](results/phase2_sensitivity_plot_8G.png) - sensitivity across signal strengths
+- [`phase2_empirical_FDR_plot_8H.png`](results/phase2_empirical_FDR_plot_8H.png) - empirical FDR across signal strengths
+- [`phase2_combined_performance_plot_8I.png`](results/phase2_combined_performance_plot_8I.png) - combined sensitivity and empirical FDR comparison
 
 Additional methodological details and interpretation are documented in [`results/README.md`](results/README.md).
+
+## Next Phase
+
+Phase 3 will extend the completed simulation framework toward additional analyses and/or real microbiome data. The existing Phase 1 and Phase 2 workflow provides the calibration and performance baseline for interpreting those later results.
+
+## Reproducibility
+
+The repository is organized so that analysis code, selected outputs, and documentation remain version controlled while large or temporary intermediate files can be excluded through `.gitignore`.
