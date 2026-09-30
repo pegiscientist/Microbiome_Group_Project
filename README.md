@@ -18,6 +18,8 @@ The project evaluates differential-abundance analysis methods using simulated mi
 ```text
 Microbiome_Group_Project/
 ├── data/
+│   ├── simulated/   # optional saved simulation datasets; most simulations are generated in the notebook
+│   └── real/        # real microbiome datasets for Phase 3
 ├── notebooks/
 │   ├── BIOT670I_Microbiome_Project.ipynb
 │   ├── biot670i_microbiome_project.py
@@ -31,12 +33,14 @@ Microbiome_Group_Project/
 │   ├── phase2_sensitivity_plot_8G.png
 │   ├── phase2_empirical_FDR_plot_8H.png
 │   └── phase2_combined_performance_plot_8I.png
-├── scripts/
+├── scripts/         # reusable standalone analysis code as the workflow is modularized
 ├── .gitignore
 └── README.md
 ```
 
 The primary analysis is maintained in the Jupyter notebook, with a Python export included in the `notebooks/` directory for easier code review and version tracking.
+
+The `data/simulated/` and `scripts/` directories are intentionally lightweight at this stage. Phase 1 and Phase 2 simulations are generated directly in the notebook, while reusable standalone functions can be moved into `scripts/` later as the project workflow is modularized. Simulation-derived summary tables and figures belong in `results/`, not `data/simulated/`.
 
 ## Phase 1: Null Calibration
 
