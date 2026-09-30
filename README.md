@@ -21,7 +21,6 @@ Microbiome_Group_Project/
 │   ├── simulated/   # optional saved simulation datasets; most simulations are generated in the notebook
 │   └── real/        # real microbiome datasets for Phase 3
 ├── notebooks/
-│   ├── BIOT670I_Microbiome_Project.ipynb
 │   ├── biot670i_microbiome_project.py
 │   └── README.md
 ├── results/
