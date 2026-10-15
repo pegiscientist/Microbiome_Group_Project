@@ -1,4 +1,4 @@
-"Simulation","Seed","Expected_BH_Rejections","Reproduced_BH_Rejections","Reproduces_Cell7G","BH_Rejections","BH_Rejections_Passing_SS","Robust_Rejections","Any_BH_Discovery","Any_Robust_Discovery"
+"Simulation","Seed","Expected_BH_Rejections","Reproduced_BH_Rejections","Reproduces_Step7G","BH_Rejections","BH_Rejections_Passing_SS","Robust_Rejections","Any_BH_Discovery","Any_Robust_Discovery"
 34,75,1,1,TRUE,1,0,0,TRUE,FALSE
 55,96,1,1,TRUE,1,0,0,TRUE,FALSE
 57,98,1,1,TRUE,1,0,0,TRUE,FALSE
